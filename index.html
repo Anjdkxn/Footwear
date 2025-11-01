@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankush Gautam Footwear</title>
+   <style type="text/css">
+       /* R/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fdfdfd;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #111;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #f5b342;
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f5b342;
+}
+
+/* Hamburger menu (hidden by default) */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background-color: #111;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    transition: height 0.3s ease-in-out;
+  }
+
+  .nav-links.open {
+    height: 270px;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Animate hamburger into “X” when active */
+  .hamburger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .hamburger.active .line:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fdfdfd;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #111;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.logo span {
+  color: #f5b342;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f5b342;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 80px;
+  background: linear-gradient(to right, #111, #222);
+  color: white;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+  padding-right: 20px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  color: #f5b342;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: #ddd;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #f5b342;
+  color: #111;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #fff;
+  transform: scale(1.05);
+}
+
+/* Hero Image */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 50px 30px;
+  }
+
+  .hero-text {
+    padding-right: 0;
+  }
+
+  .hero-image img {
+    max-width: 350px;
+    margin-bottom: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background-color: #111;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    transition: height 0.3s ease-in-out;
+  }
+
+  .nav-links.open {
+    height: 250px;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+/* Product Section */
+.products {
+  text-align: center;
+  padding: 80px 40px;
+  background-color: #fff;
+}
+
+.products h2 {
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  color: #111;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin: 15px 0 5px;
+  color: #111;
+}
+
+.card p {
+  font-weight: bold;
+  color: #f5b342;
+  margin-bottom: 10px;
+}
+
+.card .btn {
+  display: inline-block;
+  margin-bottom: 15px;
+  background-color: #111;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.card .btn:hover {
+  background-color: #f5b342;
+  color: #111;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .products {
+    padding: 60px 20px;
+  }
+
+  .products h2 {
+    font-size: 1.8rem;
+  }
+
+  .card img {
+    height: 180px;
+  }
+}
+
+/* Second Product Section */
+.second-section {
+  background-color: #f7f7f7;
+}
+
+.second-section h2 {
+  color: #111;
+  margin-bottom: 50px;
+}
+
+/* Optional hover color tweak for variety */
+.second-section .card .btn:hover {
+  background-color: #111;
+  color: #f5b342;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 60px 40px 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  justify-items: start;
+  margin-bottom: 30px;
+}
+
+.footer h2,
+.footer h3 {
+  color: #f5b342;
+  margin-bottom: 20px;
+}
+
+.footer p {
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.footer ul li i {
+  margin-right: 8px;
+  color: #f5b342;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #f5b342;
+}
+
+/* Social Links */
+.social-links a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  background-color: #222;
+  color: #f5b342;
+  text-align: center;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background-color: #f5b342;
+  color: #111;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer {
+    padding: 50px 20px 20px;
+  }
+
+  .footer-container {
+    gap: 30px;
+  }
+
+  .footer h2 {
+    font-size: 1.4rem;
+  }
+
+  .footer h3 {
+    font-size: 1.1rem;
+  }
+}
+
+   </style>
+</head>
+<body>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ankush Gautam Footwear</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Ankush Gautam <span>Footwear</span></div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="men.html">Men</a></li>
+      <li><a href="women.html">Women</a></li>
+      <li><a href="kids.html">Kids</a></li>
+      <li><a href="contactus.html">Contact Us</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+    </ul>
+
+    <div class="hamburger" id="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Step Into Style</h1>
+      <p>Comfort, Quality, and Fashion — All in One Place.</p>
+      <a href="#" class="btn">Shop Now</a>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80" alt="Footwear">
+    </div>
+  </section>
+
+<!-- Product Section -->
+<section class="products">
+  <h2>Our Latest Collection</h2>
+  <div class="product-grid">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1519744792095-2f2205e87b6f?auto=format&fit=crop&w=600&q=80" alt="Sneakers">
+      <h3>Casual Sneakers</h3>
+      <p>$59.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Running Shoes">
+      <h3>Running Shoes</h3>
+      <p>$79.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="loafer.jpg" alt="Loafers">
+      <h3>Classic Loafers</h3>
+      <p>$69.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <img src="formal.webp" alt="Formal Shoes">
+      <h3>Formal Leather</h3>
+      <p>$99.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80" alt="Sandals">
+      <h3>Summer Sandals</h3>
+      <p>$49.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card">
+      <img src="sport.webp" alt="Sports Shoes">
+      <h3>Sports Trainers</h3>
+      <p>$89.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80" alt="High Heels">
+      <h3>Elegant Heels</h3>
+      <p>$74.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="card">
+      <img src="winter.jpg" alt="Boots">
+      <h3>Winter Boots</h3>
+      <p>$109.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=600&q=80" alt="Kids Shoes">
+      <h3>Kids Collection</h3>
+      <p>$39.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Card 10 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1551106652-a5bcf4b29ab6?auto=format&fit=crop&w=600&q=80" alt="Flip Flops">
+      <h3>Comfort Flip-Flops</h3>
+      <p>$29.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Second Product Section -->
+<section class="products second-section">
+  <h2>Trending Footwear</h2>
+  <div class="product-grid">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=600&q=80" alt="White Sneakers">
+      <h3>White Sneakers</h3>
+      <p>$64.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="brown.jpg" alt="Brown Boots">
+      <h3>Brown Leather Boots</h3>
+      <p>$114.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="runner.jpg" alt="Sport Shoes">
+      <h3>Performance Runners</h3>
+      <p>$99.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <img src="high.jpg" alt="High Top Sneakers">
+      <h3>High-Top Sneakers</h3>
+      <p>$89.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card">
+      <img src="comfort.jpeg" alt="Slides">
+      <h3>Comfort Slides</h3>
+      <p>$39.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card">
+      <img src="kids_sna.webp" alt="Kids Sneakers">
+      <h3>Kids Sneakers</h3>
+      <p>$49.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="card">
+      <img src="stylish.avif" alt="Winter Boots">
+      <h3>Stylish Winter Boots</h3>
+      <p>$129.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="card">
+      <img src="casual.jpg" alt="Casual Loafers">
+      <h3>Casual Loafers</h3>
+      <p>$59.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=600&q=80" alt="Trainers">
+      <h3>Urban Trainers</h3>
+      <p>$79.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Card 10 -->
+    <div class="card">
+      <img src="slip.webp" alt="Slip-ons">
+      <h3>Slip-On Comforts</h3>
+      <p>$44.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+  </div>
+</section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Brand Info -->
+    <div class="footer-col brand">
+      <h2>Ankush Gautam <span>Footwear</span></h2>
+      <p>Step into comfort and style with our premium footwear collection for men, women, and kids.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="men.html">Men</a></li>
+        <li><a href="women.html">Women</a></li>
+        <li><a href="kids.html">Kids</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <ul>
+        <li><i class="fas fa-map-marker-alt"></i> Front of Bidhanu Bajar Fashion Street 209214,  Kanpur Nagar, India</li>
+        <li><i class="fas fa-phone-alt"></i> +91 9335435541</li>
+        <li><i class="fas fa-envelope"></i> rg936073@gmail.com</li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-col">
+      <h3>Follow Us</h3>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Ankush Gautam Footwear Kathui | All Rights Reserved</p>
+  </div>
+</footer>
+
+<!-- Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <script>
+
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+  hamburger.classList.toggle('active');
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,549 @@
+<!<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>men</title>
+	<style type="text/css">
+
+		 /* R/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fdfdfd;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #111;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #f5b342;
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f5b342;
+}
+
+/* Hamburger menu (hidden by default) */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background-color: #111;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    transition: height 0.3s ease-in-out;
+  }
+
+  .nav-links.open {
+    height: 270px;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Animate hamburger into “X” when active */
+  .hamburger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .hamburger.active .line:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fdfdfd;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #111;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.logo span {
+  color: #f5b342;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f5b342;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+
+		/* Men's Footwear Section */
+.men-section {
+  background-color: #fff;
+}
+
+.men-section h2 {
+  color: #111;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+/* Reuse existing product grid styles */
+.men-section .product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  padding: 0 40px 80px;
+}
+
+.men-section .card {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
+}
+
+.men-section .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.men-section .card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.men-section .card h3 {
+  font-size: 1.1rem;
+  margin: 15px 0 5px;
+  color: #111;
+}
+
+.men-section .card p {
+  font-weight: bold;
+  color: #f5b342;
+  margin-bottom: 10px;
+}
+
+.men-section .card .btn {
+  display: inline-block;
+  margin-bottom: 15px;
+  background-color: #111;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.men-section .card .btn:hover {
+  background-color: #f5b342;
+  color: #111;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .men-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .men-section .product-grid {
+    padding: 0 20px 60px;
+  }
+
+  .men-section .card img {
+    height: 180px;
+  }
+}
+
+/* Footer Section */
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 60px 40px 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  justify-items: start;
+  margin-bottom: 30px;
+}
+
+.footer h2,
+.footer h3 {
+  color: #f5b342;
+  margin-bottom: 20px;
+}
+
+.footer p {
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.footer ul li i {
+  margin-right: 8px;
+  color: #f5b342;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #f5b342;
+}
+
+/* Social Links */
+.social-links a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  background-color: #222;
+  color: #f5b342;
+  text-align: center;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background-color: #f5b342;
+  color: #111;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer {
+    padding: 50px 20px 20px;
+  }
+
+  .footer-container {
+    gap: 30px;
+  }
+
+  .footer h2 {
+    font-size: 1.4rem;
+  }
+
+  .footer h3 {
+    font-size: 1.1rem;
+  }
+}
+
+	</style>
+</head>
+<body>
+	 <nav class="navbar">
+    <div class="logo">Ankush Gautam <span>Footwear</span></div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="men.html">Men</a></li>
+      <li><a href="women.html">Women</a></li>
+      <li><a href="kids.html">Kids</a></li>
+      <li><a href="contactus.html">Contact Us</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+    </ul>
+
+    <div class="hamburger" id="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
+
+
+	<!-- Men's Footwear Section -->
+<section class="products men-section">
+  <h2>Men's Footwear Collection</h2>
+  <div class="product-grid">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="running.jpg" alt="Running Sneakers">
+      <h3>Running Sneakers</h3>
+      <p>$79.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="leather.jpg" alt="Leather Loafers">
+      <h3>Leather Loafers</h3>
+      <p>$89.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Casual Trainers">
+      <h3>Casual Trainers</h3>
+      <p>$69.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80" alt="Beach Sandals">
+      <h3>Beach Sandals</h3>
+      <p>$49.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card">
+      <img src="classic.jpg" alt="Formal Shoes">
+      <h3>Classic Formal Shoes</h3>
+      <p>$99.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card">
+      <img src="slipon.webp" alt="Slip-On Sneakers">
+      <h3>Slip-On Sneakers</h3>
+      <p>$74.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1551106652-a5bcf4b29ab6?auto=format&fit=crop&w=600&q=80" alt="Suede Boots">
+      <h3>Suede Boots</h3>
+      <p>$119.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=600&q=80" alt="White Trainers">
+      <h3>White Trainers</h3>
+      <p>$84.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80" alt="High-top Sneakers">
+      <h3>High-top Sneakers</h3>
+      <p>$89.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Card 10 -->
+    <div class="card">
+      <img src="shoes.webp" alt="Running Shoes">
+      <h3>Sport Running Shoes</h3>
+      <p>$94.99</p>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+  </div>
+</section>
+	
+
+	!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Brand Info -->
+    <div class="footer-col brand">
+      <h2>Ankush Gautam <span>Footwear</span></h2>
+      <p>Step into comfort and style with our premium footwear collection for men, women, and kids.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="men.html">Men</a></li>
+        <li><a href="women.html">Women</a></li>
+        <li><a href="kids.html">Kids</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <ul>
+        <li><i class="fas fa-map-marker-alt"></i> Front of Bidhanu Bajar Fashion Street 209214,  Kanpur Nagar, India</li>
+        <li><i class="fas fa-phone-alt"></i> +91 9335435541</li>
+        <li><i class="fas fa-envelope"></i> rg936073@gmail.com</li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-col">
+      <h3>Follow Us</h3>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Ankush Gautam Footwear Kathui | All Rights Reserved</p>
+  </div>
+</footer>
+
+<!-- Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+  hamburger.classList.toggle('active');
+});
+	</script>
+</body>
+</html>
